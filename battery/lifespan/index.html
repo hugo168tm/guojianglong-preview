@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<!-- status: draft — /battery/lifespan/｜2026-11-26｜noindex 中，未發佈；見 docs/DRAFT-REGISTER.md -->
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>汽車電池壽命：幾耐要換、電壓幾多先正常</title>
+<meta name="description" content="汽車電池壽命一般 2 至 3 年；靜止 12.6V 正常，撻車跌低過 9.6V 或熄匙兩小時低於 12.2V 即老化。另講 AGM／EFB 分別同充電貼士。">
+<link rel="canonical" href="https://taxi-jumpstart.com/battery/lifespan/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="汽車電池壽命：幾耐要換、電壓幾多先正常">
+<meta property="og:description" content="壽命年期、電壓表、AGM／EFB 分別、充電方法同幾時換電，一頁睇完。">
+<meta property="og:image" content="https://taxi-jumpstart.com/assets/hero-ending.jpg">
+<meta property="og:image:alt" content="搭電後車頭燈亮起，代表電池仍然可以撐">
+<meta property="og:url" content="https://taxi-jumpstart.com/battery/lifespan/">
+<meta property="og:locale" content="zh_HK">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0C1120">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230C1120'/%3E%3Cpath d='M12 38 Q26 20 38 32 T58 26' stroke='%23FFA94C' stroke-width='5' fill='none' stroke-linecap='round'/%3E%3Cpath d='M14 46 Q28 30 40 42 T56 34' stroke='%23E5443F' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/pages-zcool-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/fonts/pages-fonts.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="../../assets/fonts/pages-fonts.css"></noscript>
+<link rel="stylesheet" href="../../assets/style.css?v=25">
+<link rel="stylesheet" href="../../assets/pages.css?v=4">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LXWR9DQGWZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-LXWR9DQGWZ');
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://taxi-jumpstart.com/battery/lifespan/#service",
+      "name": "汽車電池壽命判斷與 24 小時搭電",
+      "serviceType": "汽車電池搭電救車",
+      "description": "電池老化撻唔著，24 小時上門搭電：12V 私家車 $2XX 起、24V 貨車 $5XX 起、電單車 $180 起，15 至 20 分鐘到場。",
+      "provider": { "@id": "https://taxi-jumpstart.com/#org" },
+      "url": "https://taxi-jumpstart.com/battery/lifespan/",
+      "areaServed": [
+        { "@type": "AdministrativeArea", "name": "香港島" },
+        { "@type": "AdministrativeArea", "name": "九龍" },
+        { "@type": "AdministrativeArea", "name": "新界" }
+      ],
+      "hoursAvailable": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "00:00", "closes": "23:59" },
+      "offers": [
+        { "@type": "Offer", "name": "12V 私家車搭電救車", "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "HKD", "minPrice": 200, "maxPrice": 299 }, "areaServed": { "@type": "AdministrativeArea", "name": "香港" } },
+        { "@type": "Offer", "name": "24V 貨車搭電救車", "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "HKD", "minPrice": 500 }, "areaServed": { "@type": "AdministrativeArea", "name": "香港" } },
+        { "@type": "Offer", "name": "電單車搭電救車", "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "HKD", "price": 180 }, "areaServed": { "@type": "AdministrativeArea", "name": "香港" } }
+      ]
+    },
+    {
+      "@type": "Dataset",
+      "@id": "https://taxi-jumpstart.com/battery/lifespan/#voltage-dataset",
+      "name": "汽車電池電壓參考表（12V 系統）",
+      "description": "香港車主用萬用表量 12V 汽車電池時嘅參考數值：靜止電壓、撻車瞬間最低電壓、引擎運行時充電電壓，以及對應判斷。",
+      "creator": { "@id": "https://taxi-jumpstart.com/#org" },
+      "isAccessibleForFree": true,
+      "measurementTechnique": "用萬用表（DC 電壓檔）直接量電池正負極樁頭",
+      "variableMeasured": [
+        { "@type": "PropertyValue", "name": "靜止電壓（熄匙兩小時後）", "unitText": "V" },
+        { "@type": "PropertyValue", "name": "撻車瞬間最低電壓", "unitText": "V" },
+        { "@type": "PropertyValue", "name": "引擎運行時充電電壓", "unitText": "V" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://taxi-jumpstart.com/battery/lifespan/#faq",
+      "mainEntity": [
+        { "@type": "Question", "name": "汽車電池壽命有幾多年？", "acceptedAnswer": { "@type": "Answer", "text": "一般 2 至 3 年。香港短途多、塞車多、成日開開停停，1 至 2 年就要換嘅個案亦好常見；長途多、少熄火聽歌、保養好可以用到 3 至 4 年。超過 3 年就要開始定期驗電壓。" } },
+        { "@type": "Question", "name": "汽車電池電壓幾多先算正常？", "acceptedAnswer": { "@type": "Answer", "text": "12V 系統：熄匙兩小時後靜止 12.6 至 12.8V 為充滿；12.2 至 12.4V 約一半；低於 12.0V 偏低。引擎運行時充電電壓 13.8 至 14.8V 為正常；撻車瞬間跌低過 9.6V，多數代表電池內阻已經偏大。" } },
+        { "@type": "Question", "name": "汽車電池壞之前有咩前兆？", "acceptedAnswer": { "@type": "Answer", "text": "撻車聲變慢變重、停一晚翌日就要搭電、車頭燈同室內燈變暗、Start-Stop 愈來愈少觸發、電池表面脹或樁頭有白色粉末、行車紀錄儀成日重開機。出現兩項以上，多數係電池老化。" } },
+        { "@type": "Question", "name": "AGM 同 EFB 電池有咩分別？", "acceptedAnswer": { "@type": "Answer", "text": "兩隻都係 Start-Stop 車用。AGM 用玻璃纖維吸附電解液，循環壽命較長、抗震好，壽命一般 4 至 6 年，多數配歐系車；EFB 係加強型鉛酸，壽命一般 3 至 5 年，價格較親民，多數配日系 Start-Stop 車。" } },
+        { "@type": "Question", "name": "汽車電池有幾多種類？", "acceptedAnswer": { "@type": "Answer", "text": "常見四種：普通鉛酸（無 Start-Stop 嘅舊車）、EFB（加強型鉛酸）、AGM（玻璃纖維，Start-Stop 常用）、LFP 磷酸鐵鋰（新式，輕但價錢高）。種類要對車廠要求，亂配會令壽命縮短。" } },
+        { "@type": "Question", "name": "汽車電池點充電最唔傷電池？", "acceptedAnswer": { "@type": "Answer", "text": "用有恆壓控制嘅智能充電器，慢充（約 2 至 10A）比快充好；室溫、通風地方充，唔好充過夜無人看管，亦唔好喺電池脹或漏水時充。充完等 1 至 2 小時再量電壓，睇有冇上到 12.6V。" } },
+        { "@type": "Question", "name": "汽車電池正負極點分？", "acceptedAnswer": { "@type": "Answer", "text": "正極標「＋」、多數紅色或有紅色蓋；負極標「－」、多數黑色。接線永遠正極先行，拆線先負後正。樁頭有白色粉末要用梳打水清潔再抹乾，唔好夾到車身金屬造成短路。" } },
+        { "@type": "Question", "name": "電壓跌到幾多就要換電池？", "acceptedAnswer": { "@type": "Answer", "text": "熄匙兩小時後靜止電壓低於 12.2V，而且充完電都上唔返 12.6V；或者撻車瞬間跌低過 9.6V，通常代表電池到期限。連續兩日朝早都要搭電，就唔好再等。" } },
+        { "@type": "Question", "name": "汽車電池幾耐換一次先合理？", "acceptedAnswer": { "@type": "Answer", "text": "按年期同實測一齊睇：3 年以上＋靜止電壓低於 12.4V，換比較穩陣；未夠 2 年但撻車明顯無力，就要驗發電機同電池內阻。唔好笑住換——如果發電機有問題，新電池都會好快冇電。" } }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">跳至主要內容</a>
+
+<nav class="nav" aria-label="主導覽">
+  <a class="nav-brand" href="../../index.html" aria-label="過江龍的士搭電 首頁">
+    <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><path d="M12 38 Q26 20 38 32 T58 26" stroke="#FFA94C" stroke-width="5" fill="none" stroke-linecap="round"/><path d="M14 46 Q28 30 40 42 T56 34" stroke="#E5443F" stroke-width="4" fill="none" stroke-linecap="round"/></svg>
+    <span class="brand-name">過江龍的士搭電</span>
+  </a>
+  <a class="nav-call chip" href="tel:+85253683668">Call 5368 3668</a>
+</nav>
+
+<main id="main" tabindex="-1">
+
+<section class="p-hero" aria-labelledby="page-h1">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="麵包屑導覽">
+      <a href="../../index.html">首頁</a><span class="sep">›</span><a href="../../battery/">汽車電池</a><span class="sep">›</span><span aria-current="page">壽命同電壓</span>
+    </nav>
+    <h1 class="p-h1" id="page-h1">汽車電池壽命：<span class="nb">幾耐要換</span>、電壓睇邊個數</h1>
+    <p class="p-sub">呢頁用數字講清楚：電池一般用到幾耐、靜止同充電電壓幾多先算正常、AGM 同 EFB 邊隻長命、幾時只係要搭電、幾時要換電。</p>
+
+    <div class="ans">
+      <span class="ans-label">一句答你</span>
+      <p>汽車電池壽命一般 <strong>2 至 3 年</strong>，香港短途多、1 至 2 年就要換亦常見。靜止 <strong>12.6V</strong> 為正常；熄匙兩小時後低於 12.2V、或撻車跌低過 9.6V 即老化。撻唔著可即時搭電，$2XX 起。</p>
+    </div>
+
+    <div class="cta-row">
+      <a class="btn" href="tel:+85253683668">Call 5368 3668</a>
+      <a class="btn ghost" href="#voltage">睇電壓表</a>
+    </div>
+    <p class="fine">24 小時接聽；15 至 20 分鐘到場。</p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="life-h">
+  <div class="wrap sec-enter">
+    <p class="kicker">壽命</p>
+    <h2 class="h2" id="life-h">汽車電池壽命要睇邊三件事？</h2>
+    <div class="card-grid stagger">
+      <div class="card"><span class="tag">普遍情況</span><h3>2 至 3 年</h3><p>一般鉛酸電池嘅正常年期。新車電池通常由 2 至 3 年起計，唔係「用到壞先算」。</p></div>
+      <div class="card"><span class="tag">香港實況</span><h3>1 至 2 年就要換</h3><p>短途多、塞車多、成日開開停停，電池每次撻車都用大量電流，充返又唔夠，壽命自然縮短。</p></div>
+      <div class="card"><span class="tag">保養好</span><h3>3 至 4 年</h3><p>長途多、少熄火聽歌、樁頭乾淨、發電機健康，用到 3 至 4 年唔出奇。超過 3 年建議每年驗一次電壓。</p></div>
+    </div>
+    <div class="prose">
+      <p>AGM 電池一般 4 至 6 年，EFB 一般 3 至 5 年，普通鉛酸 2 至 3 年，LFP 磷酸鐵鋰標稱更長但要配合 BMS 同充電曲線。年期只係參考，實際要睇電壓同撻車表現。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="voltage-h" id="voltage">
+  <div class="wrap sec-enter">
+    <p class="kicker">電壓</p>
+    <h2 class="h2" id="voltage-h">汽車電池電壓幾多先算正常？</h2>
+    <div class="tbl-wrap">
+      <table class="fee">
+        <caption class="fine" style="text-align:left;padding:.8rem 1rem">用萬用表量 12V 系統電池樁頭（引擎熄火／運行時量）</caption>
+        <thead>
+          <tr><th scope="col">狀態</th><th scope="col">讀數</th><th scope="col">代表咩</th><th scope="col">要做咩</th></tr>
+        </thead>
+        <tbody>
+          <tr><td data-label="狀態">熄匙兩小時後（靜止）</td><td class="nowrap" data-label="讀數"><strong>12.6 – 12.8V</strong></td><td data-label="代表咩">充滿，健康</td><td data-label="要做咩">唔使理，定期驗就夠</td></tr>
+          <tr><td data-label="狀態">靜止</td><td class="nowrap" data-label="讀數">12.2 – 12.4V</td><td data-label="代表咩">約一半電量</td><td data-label="要做咩">用智能充電器慢充一次</td></tr>
+          <tr><td data-label="狀態">靜止</td><td class="nowrap" data-label="讀數">&lt; 12.0V</td><td data-label="代表咩">偏低，隨時撻唔著</td><td data-label="要做咩">充電；充完都上唔返 12.6V 就係老化</td></tr>
+          <tr><td data-label="狀態">撻車瞬間最低點</td><td class="nowrap" data-label="讀數">&lt; 9.6V</td><td data-label="代表咩">內阻偏大，起動電流唔夠</td><td data-label="要做咩">準備換電池；先驗發電機</td></tr>
+          <tr><td data-label="狀態">引擎運行（充電中）</td><td class="nowrap" data-label="讀數"><strong>13.8 – 14.8V</strong></td><td data-label="代表咩">發電機正常充電</td><td data-label="要做咩">唔使做嘢</td></tr>
+          <tr><td data-label="狀態">引擎運行</td><td class="nowrap" data-label="讀數">&lt; 13.2V</td><td data-label="代表咩">充電不足，未必係電池問題</td><td data-label="要做咩">驗發電機、皮帶同線路</td></tr>
+          <tr><td data-label="狀態">24V 商用車（兩粒 12V 串聯）</td><td class="nowrap" data-label="讀數">靜止約 25.2 – 25.6V</td><td data-label="代表咩">同樣按比例判斷</td><td data-label="要做咩">唔可以用私家車 12V 線照夾</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note-box">
+      <p><strong>量之前：</strong>熄匙、關所有電器，等兩小時（或者前一晚泊低），度數先準。剛熄匙即刻量會偏高，撻完車即刻量會偏低，兩者都唔作準。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="sign-h">
+  <div class="wrap sec-enter">
+    <p class="kicker">訊號</p>
+    <h2 class="h2" id="sign-h">電池就快到期會有咩訊號？</h2>
+    <ul class="check-list">
+      <li>撻車聲變慢、變重，但最後都撻得著</li>
+      <li>停一晚，翌日朝早就要搭電</li>
+      <li>車頭燈、室內燈明顯變黃變暗</li>
+      <li>Start-Stop 自動熄匙愈來愈少觸發</li>
+      <li>電池表面脹、樁頭有白色粉末或腐蝕</li>
+      <li>行車紀錄儀成日重開機、音響記憶重設</li>
+      <li>電池已經用超過 3 年，靜止電壓低於 12.4V</li>
+    </ul>
+    <div class="prose">
+      <p>中兩項以上，多數係電池老化；但如果只係「忘記關燈」、「擺太耐冇撻」、「行車紀錄儀長開」造成單次放電，搭電後揸幾日充返就得，唔一定要換。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="type-h">
+  <div class="wrap sec-enter">
+    <p class="kicker">種類</p>
+    <h2 class="h2" id="type-h">AGM、EFB、鉛酸、LFP 邊隻啱你部車？</h2>
+    <div class="tbl-wrap">
+      <table class="fee">
+        <thead><tr><th scope="col">種類</th><th scope="col">壽命參考</th><th scope="col">適合</th><th scope="col">唔好處</th></tr></thead>
+        <tbody>
+          <tr><td data-label="種類"><strong>普通鉛酸</strong></td><td data-label="壽命參考">2 至 3 年</td><td data-label="適合">無 Start-Stop 嘅舊車</td><td data-label="唔好處">深放電後回復力差</td></tr>
+          <tr><td data-label="種類"><strong>EFB</strong></td><td data-label="壽命參考">3 至 5 年</td><td data-label="適合">日系 Start-Stop 車</td><td data-label="唔好處">價錢比鉛酸高</td></tr>
+          <tr><td data-label="種類"><strong>AGM</strong></td><td data-label="壽命參考">4 至 6 年</td><td data-label="適合">歐系車、高用電、Start-Stop</td><td data-label="唔好處">價錢最高，唔可以亂用普通充電器</td></tr>
+          <tr><td data-label="種類"><strong>LFP 鋰鐵</strong></td><td data-label="壽命參考">標稱更長</td><td data-label="適合">想輕、想長壽、有 BMS 配套</td><td data-label="唔好處">價錢高、低溫表現同充電曲線要配合車款</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note-box">
+      <p><strong>AGM 同 EFB 唔可以互換：</strong>原廠要求 AGM 嘅車，用 EFB 會令 Start-Stop 失效兼縮短壽命；原本 EFB 嘅車用 AGM 通常可以，但價錢貴，唔必要。換之前睇舊電池標籤最實際。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="charge-h">
+  <div class="wrap sec-enter">
+    <p class="kicker">充電</p>
+    <h2 class="h2" id="charge-h">汽車電池充電有邊四條規矩？</h2>
+    <ul class="check-list">
+      <li><strong>慢充好過快充</strong> —— 智能充電器 2 至 10A，比大電流快充溫和，電池壽命長啲。</li>
+      <li><strong>通風、室溫、有人看管</strong> —— 唔好室內密閉、唔好過夜無人看管；充電會產生氫氣。</li>
+      <li><strong>先正後負、拆先負後正</strong> —— 同搭電一樣，次序錯會出火花。</li>
+      <li><strong>充完等 1 至 2 小時再量</strong> —— 上到 12.6V 代表充得返；仍然 12.2V 以下，多數電池到期限。</li>
+    </ul>
+    <div class="note-box warn-box">
+      <p><strong>唔好充：</strong>電池表面脹、外殼變形、有滲漏或有燒焦味——呢啲情況充電有危險，直接換。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="polar-h">
+  <div class="wrap sec-enter">
+    <p class="kicker">正負極</p>
+    <h2 class="h2" id="polar-h">汽車電池正負極點分？接反會點？</h2>
+    <div class="prose">
+      <p>正極標「＋」，多數紅色或有紅色膠蓋，線通常較粗；負極標「－」，多數黑色，接車身接地。接線永遠<strong>正極先行</strong>，拆線<strong>先負後正</strong>。</p>
+      <p>樁頭有白色粉末（氧化物）要用梳打水或專用清潔劑處理，抹乾再上保護油脂。唔好夾到車身金屬、唔好正負相碰——短路可以燒電腦同保險絲。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-label="現場相片">
+  <div class="wrap sec-enter">
+    <figure class="p-figure">
+      <img src="../../assets/hero-ending.jpg" alt="搭電後車頭燈亮起，電池仍然撐得住" loading="lazy" width="1920" height="1080">
+      <figcaption>撻著之後燈光回復正常，代表電池仲有電；翌日朝早又要搭電，就係老化訊號。</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="area-h">
+  <div class="wrap sec-enter">
+    <p class="kicker">地區</p>
+    <h2 class="h2" id="area-h">邊幾區有得上門驗電池壽命？</h2>
+    <div class="prose">
+      <p>電池驗電壓、搭電同換電查詢，全港各區都做：香港島、九龍、新界，包括屋邨、商場停車場、工業大廈同高速出口。元朗、荃灣、屯門、土瓜灣等查詢最多嘅地區，搭電平均 15 至 20 分鐘到場。</p>
+    </div>
+    <div class="area-chips">
+      <span class="chip">元朗</span><span class="chip">荃灣</span><span class="chip">屯門</span><span class="chip">土瓜灣</span><span class="chip">沙田</span><span class="chip">將軍澳</span><span class="chip">觀塘</span><span class="chip">中西區</span>
+    </div>
+  </div>
+</section>
+
+<section class="section faq" id="faq" aria-labelledby="faq-h">
+  <div class="wrap sec-enter">
+    <p class="kicker">常見問題</p>
+    <h2 class="h2" id="faq-h">電池壽命同電壓，車主最想問咩？</h2>
+    <div class="faq-list">
+      <details><summary>汽車電池壽命有幾多年？</summary><p>一般 2 至 3 年。香港短途多、塞車多，1 至 2 年就要換嘅個案亦常見；長途多、保養好可以用 3 至 4 年。超過 3 年建議每年驗一次電壓。</p></details>
+      <details><summary>汽車電池電壓幾多先算正常？</summary><p>12V 系統：熄匙兩小時後靜止 12.6 至 12.8V 為充滿；12.2 至 12.4V 約一半；低於 12.0V 偏低。引擎運行 13.8 至 14.8V 正常；撻車瞬間跌低過 9.6V，多數內阻已偏大。</p></details>
+      <details><summary>汽車電池壞之前有咩前兆？</summary><p>撻車聲變慢、停一晚就要搭電、燈變暗、Start-Stop 少觸發、電池脹或樁頭有白粉、行車紀錄儀重開機。中兩項以上多數係老化。</p></details>
+      <details><summary>AGM 同 EFB 有咩分別？</summary><p>兩隻都係 Start-Stop 車用。AGM 壽命一般 4 至 6 年、抗震好，多配歐系車；EFB 3 至 5 年、價錢親民，多配日系車。原廠要 AGM 就唔可以用 EFB 代替。</p></details>
+      <details><summary>汽車電池有幾多種類？</summary><p>普通鉛酸、EFB、AGM、LFP 磷酸鐵鋰四種。種類要對車廠要求：無 Start-Stop 可用鉛酸，有 Start-Stop 就要 AGM 或 EFB。</p></details>
+      <details><summary>汽車電池點充電最唔傷電池？</summary><p>智能充電器慢充 2 至 10A、通風室溫、有人看管；先正後負接線，拆先負後正；充完等 1 至 2 小時再量，上到 12.6V 為之充得返。</p></details>
+      <details><summary>汽車電池正負極點分？</summary><p>正極「＋」多數紅色或有紅蓋，負極「－」多數黑色。接線正極先行、拆線先負後正。樁頭有白色氧化物要清潔抹乾。</p></details>
+      <details><summary>電壓跌到幾多就要換電池？</summary><p>靜止低於 12.2V 而充完都上唔返 12.6V，或撻車瞬間低於 9.6V，通常代表到期限。連續兩日朝早都要搭電就唔好再等。</p></details>
+      <details><summary>汽車電池幾耐換一次先合理？</summary><p>3 年以上＋靜止電壓低於 12.4V，換比較穩陣；未夠 2 年但撻車明顯無力，就要驗發電機同內阻。唔好笑住換——發電機有問題，新電都會好快冇電。</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="rel-h">
+  <div class="wrap sec-enter">
+    <p class="kicker">相關</p>
+    <h2 class="h2" id="rel-h">電池壽命睇完，跟住睇邊頁？</h2>
+    <div class="rel-grid">
+      <a href="../../battery/"><h3>汽車電池總覽</h3><p>規格（Ah／CCA）、牌子同揀法，一頁睇完。</p></a>
+      <a href="../../battery/replace/"><h3>上門換電</h3><p>換電價錢構成、五步流程同注意事項。</p></a>
+      <a href="../../services/24-hour-rescue/"><h3>24 小時救車服務</h3><p>撻唔著即刻到場，全港各區 15 至 20 分鐘。</p></a>
+      <a href="../../guides/jump-lead-steps/"><h3>救車線接法 6 步</h3><p>自己接線嘅正確次序同三個危險錯誤。</p></a>
+    </div>
+  </div>
+</section>
+
+<section class="section p-end" aria-labelledby="cta-h">
+  <div class="wrap sec-enter">
+    <h2 class="h2" id="cta-h">點知電池仲撐唔撐得住？</h2>
+    <p class="lede">打 5368 3668，講車款同讀數，15 至 20 分鐘到場幫你撻著。</p>
+    <a class="btn big" href="tel:+85253683668">Call 5368 3668</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <p class="foot-name">過江龍的士搭電救車</p>
+    <p class="foot-line">24 小時救車熱線：<a href="tel:+85253683668">+852 5368 3668</a></p>
+    <p class="foot-line">服務範圍：香港全港各區</p>
+    <p class="foot-note">© 2026 過江龍的士搭電救車．本頁為草稿（未發佈）</p>
+  </div>
+</footer>
+
+<script src="../../assets/pages.js?v=4"></script>
+</body>
+</html>

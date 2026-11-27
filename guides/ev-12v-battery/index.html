@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<!-- status: draft — /guides/ev-12v-battery/｜2026-11-26｜noindex 中，未發佈；見 docs/DRAFT-REGISTER.md -->
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Tesla 12V 電池：幾時死、點處理</title>
+<meta name="description" content="電動車都有 12V 輔助電池，一般 3 至 4 年老化，會出現「12V 電池需要更換」警告、車門開唔到、螢幕唔著。搭電注意接點同電壓系統，唔識就交技師。">
+<link rel="canonical" href="https://taxi-jumpstart.com/guides/ev-12v-battery/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Tesla 12V 電池：幾時死、點處理">
+<meta property="og:description" content="12V 輔助電池作用、老化症狀、搭電注意同幾時換。">
+<meta property="og:image" content="https://taxi-jumpstart.com/assets/hero-ending.jpg">
+<meta property="og:image:alt" content="電動車夜間車頭燈亮起">
+<meta property="og:url" content="https://taxi-jumpstart.com/guides/ev-12v-battery/">
+<meta property="og:locale" content="zh_HK">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0C1120">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230C1120'/%3E%3Cpath d='M12 38 Q26 20 38 32 T58 26' stroke='%23FFA94C' stroke-width='5' fill='none' stroke-linecap='round'/%3E%3Cpath d='M14 46 Q28 30 40 42 T56 34' stroke='%23E5443F' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/pages-zcool-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/fonts/pages-fonts.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="../../assets/fonts/pages-fonts.css"></noscript>
+<link rel="stylesheet" href="../../assets/style.css?v=25">
+<link rel="stylesheet" href="../../assets/pages.css?v=4">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LXWR9DQGWZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-LXWR9DQGWZ');
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "HowTo",
+      "@id": "https://taxi-jumpstart.com/guides/ev-12v-battery/#howto",
+      "name": "電動車 12V 電池冇電：三步處理",
+      "description": "電動車 12V 輔助電池冇電時嘅安全處理次序：確認症狀、用指定接點接電、之後安排檢查。",
+      "totalTime": "PT15M",
+      "step": [
+        { "@type": "HowToStep", "position": 1, "name": "確認係 12V 問題", "text": "車門開唔到、螢幕唔著、解鎖反應遲鈍，多數係 12V 輔助電池；高壓大電池冇電嘅症狀唔同（多數係動力限制或完全唔行）。" },
+        { "@type": "HowToStep", "position": 2, "name": "用車廠指定接點接電", "text": "部分車型要打開前備箱（frunk）或指定接線位接電，唔好隨便夾車身金屬；近年部分車型改用 15 至 16V 鋰 12V 系統，接電前睇車主手冊或問原廠。" },
+        { "@type": "HowToStep", "position": 3, "name": "撻著後安排檢查", "text": "撻著後盡快安排驗 12V 電池健康同充電系統；反覆冇電即代表電池到期，唔好長期靠搭電。" }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://taxi-jumpstart.com/guides/ev-12v-battery/#service",
+      "name": "電動車 12V 輔助電池搭電",
+      "serviceType": "上門搭電救車",
+      "description": "電動車 12V 輔助電池冇電，24 小時上門搭電：12V 系統 $2XX 起，15 至 20 分鐘到場，全港各區。",
+      "provider": { "@id": "https://taxi-jumpstart.com/#org" },
+      "areaServed": [
+        { "@type": "AdministrativeArea", "name": "香港島" },
+        { "@type": "AdministrativeArea", "name": "九龍" },
+        { "@type": "AdministrativeArea", "name": "新界" }
+      ],
+      "hoursAvailable": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "00:00", "closes": "23:59" },
+      "offers": [
+        { "@type": "Offer", "name": "12V 系統搭電（含電動車輔助電池）", "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "HKD", "minPrice": 200, "maxPrice": 299 }, "areaServed": { "@type": "AdministrativeArea", "name": "香港" } }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://taxi-jumpstart.com/guides/ev-12v-battery/#faq",
+      "mainEntity": [
+        { "@type": "Question", "name": "電動車係唔係都有 12V 電池？", "acceptedAnswer": { "@type": "Answer", "text": "有。除咗高壓大電池，電動車仲有一粒 12V（部分新型號係 15 至 16V 鋰）輔助電池，用嚟供電俾車電腦、螢幕、車門、燈光同安全系統。輔助電池冇電，車就開唔到、解鎖都可能失效。" } },
+        { "@type": "Question", "name": "Tesla 12V 電池幾耐要換？", "acceptedAnswer": { "@type": "Answer", "text": "一般 3 至 4 年，視乎用車習慣同氣候。車機出「12V 電池需要更換」或類似警告、或者頻繁解鎖失敗，就應該安排檢查。實際年期同型號以車主手冊同原廠建議為準。" } },
+        { "@type": "Question", "name": "電動車 12V 電池冇電有咩症狀？", "acceptedAnswer": { "@type": "Answer", "text": "車門解鎖反應遲鈍或開唔到、螢幕唔著或反覆重啟、車燈變暗、APP 連線失敗、車輛報 12V 電池警告。呢啲多數係輔助電池，唔係高壓大電池。" } },
+        { "@type": "Question", "name": "電動車 12V 冇電可以搭電嗎？", "acceptedAnswer": { "@type": "Answer", "text": "可以，但要按車廠指定接點：部分車型要開前備箱或接指定正負極位，唔好隨便夾車身金屬。近年部分車型 12V 系統電壓較高，接電前要睇手冊，唔肯定就叫技師。" } },
+        { "@type": "Question", "name": "搭電會唔會影響電動車系統？", "acceptedAnswer": { "@type": "Answer", "text": "按指定接點、正確極性、短時間接電，一般唔會影響。反而亂夾、電壓唔對、長時間夾住，有可能影響控制模組。所以接電前確認車型同接點位置。" } },
+        { "@type": "Question", "name": "電動車 12V 電池可以自己換嗎？", "acceptedAnswer": { "@type": "Answer", "text": "唔建議。12V 輔助電池位置、斷電程序同系統重設都要按車廠流程；高壓系統附近亦唔應該自己動手。交原廠或合資格車房處理最穩陣。" } },
+        { "@type": "Question", "name": "12V 電池同高壓電池有咩分別？", "acceptedAnswer": { "@type": "Answer", "text": "12V 輔助電池供電俾車電腦同電子設備；高壓大電池驅動馬達，電壓數百伏。高壓電池冇電或故障，絕對唔可以自己處理，亦唔關搭電事。" } },
+        { "@type": "Question", "name": "電動車 12V 電池幾錢？", "acceptedAnswer": { "@type": "Answer", "text": "價錢視乎車型同原廠零件，冇統一數；原廠更換同外間車房價錢亦有差。建議先問原廠報價，再比較；搭電服務就固定 12V $2XX 起。" } },
+        { "@type": "Question", "name": "12V 電池成日冇電，係咩原因？", "acceptedAnswer": { "@type": "Answer", "text": "三個可能：電池老化、車輛休眠時有異常耗電（軟件或加裝設備）、充電系統（DC-DC 轉換）問題。反覆冇電就要驗，唔好長期靠搭電。" } }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">跳至主要內容</a>
+
+<nav class="nav" aria-label="主導覽">
+  <a class="nav-brand" href="../../index.html" aria-label="過江龍的士搭電 首頁">
+    <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><path d="M12 38 Q26 20 38 32 T58 26" stroke="#FFA94C" stroke-width="5" fill="none" stroke-linecap="round"/><path d="M14 46 Q28 30 40 42 T56 34" stroke="#E5443F" stroke-width="4" fill="none" stroke-linecap="round"/></svg>
+    <span class="brand-name">過江龍的士搭電</span>
+  </a>
+  <a class="nav-call chip" href="tel:+85253683668">Call 5368 3668</a>
+</nav>
+
+<main id="main" tabindex="-1">
+
+<section class="p-hero" aria-labelledby="page-h1">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="麵包屑導覽">
+      <a href="../../index.html">首頁</a><span class="sep">›</span><span aria-current="page">教學：電動車 12V 電池</span>
+    </nav>
+    <h1 class="p-h1" id="page-h1">電動車 12V 電池：Tesla 車主要注意</h1>
+    <p class="p-sub">電動車除咗高壓大電池，仲有一粒 12V 輔助電池。呢頁講佢做乜、老化症狀、搭電時嘅接點同電壓注意，同幾時要換。</p>
+
+    <div class="ans">
+      <span class="ans-label">一句答你</span>
+      <p>電動車都有 <strong>12V 輔助電池</strong>，負責供電俾電腦、車門同螢幕；一般 <strong>3 至 4 年</strong>老化，會出「12V 電池需要更換」警告、車門開唔到、螢幕唔著。撻唔著可搭電 <strong>$2XX 起</strong>，15 至 20 分鐘到場。</p>
+    </div>
+
+    <div class="cta-row">
+      <a class="btn" href="tel:+85253683668">Call 5368 3668</a>
+      <a class="btn ghost" href="#symptom">睇老化症狀</a>
+    </div>
+    <p class="fine">24 小時接聽；唔肯定接點位置，就交技師。</p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="what-h">
+  <div class="wrap sec-enter">
+    <p class="kicker">係咩</p>
+    <h2 class="h2" id="what-h">12V 輔助電池同高壓電池邊度唔同？</h2>
+    <div class="card-grid two stagger">
+      <div class="card"><span class="tag">12V 輔助</span><h3>供電俾電子系統</h3><p>車電腦、螢幕、車門鎖、燈光、安全氣袋、OTA 更新都靠佢。冇電就開唔到車、解鎖都可能失效。</p></div>
+      <div class="card"><span class="tag">高壓</span><h3>驅動馬達</h3><p>數百伏特，屬專業維修範圍。高壓電池冇電或故障，唔可以自己處理，亦唔關搭電事。</p></div>
+    </div>
+    <div class="note-box">
+      <p><strong>電壓注意：</strong>近年部分電動車改用 15 至 16V 鋰 12V 系統，唔一定同傳統 12V 鉛酸一樣。接電或用應急電源前，睇車主手冊或問原廠最穩陣。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="symptom-h" id="symptom">
+  <div class="wrap sec-enter">
+    <p class="kicker">症狀</p>
+    <h2 class="h2" id="symptom-h">12V 電池就快到期有咩訊號？</h2>
+    <ul class="check-list">
+      <li>車機出「12V 電池需要更換」或類似警告</li>
+      <li>車門解鎖反應遲鈍、有時開唔到</li>
+      <li>螢幕唔著或反覆重啟、開機好慢</li>
+      <li>車燈、室內燈變暗；APP 連線失敗</li>
+      <li>停一晚翌日就要搭電，或者完全冇反應</li>
+    </ul>
+    <div class="prose">
+      <p>出現兩項以上，就唔好等；12V 輔助電池一旦完全冇電，車可能連解鎖都做唔到，到時要開前備箱接電，程序更麻煩。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="jump-h">
+  <div class="wrap sec-enter">
+    <p class="kicker">搭電</p>
+    <h2 class="h2" id="jump-h">幫電動車搭電有邊三個注意？</h2>
+    <div class="tbl-wrap">
+      <table class="fee">
+        <thead><tr><th scope="col">注意</th><th scope="col">點解</th><th scope="col">點做</th></tr></thead>
+        <tbody>
+          <tr><td><strong>接點位置</strong></td><td>唔同車型接電位唔同，部分要開前備箱</td><td>按車主手冊指定正負極位，唔好隨便夾車身金屬</td></tr>
+          <tr><td><strong>系統電壓</strong></td><td>部分新款用 15 至 16V 鋰 12V 系統</td><td>接電前確認；唔肯定就叫技師</td></tr>
+          <tr><td><strong>接電時間</strong></td><td>長時間夾住或多次撻車，會增加模組負擔</td><td>撻著即拆，唔好長夾；撻唔著停手等檢查</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note-box warn-box">
+      <p><strong>唔好亂試：</strong>正負接反、夾錯位置、或者用錯電壓嘅應急電源，都可能影響控制模組，維修費高。搭電服務 12V $2XX 起，唔使自己搏。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="replace-h">
+  <div class="wrap sec-enter">
+    <p class="kicker">幾時換</p>
+    <h2 class="h2" id="replace-h">12V 輔助電池幾時一定要換？</h2>
+    <div class="tbl-wrap">
+      <table class="fee">
+        <thead><tr><th scope="col">情況</th><th scope="col">建議</th><th scope="col">價錢</th></tr></thead>
+        <tbody>
+          <tr><td>3 至 4 年、出現更換警告</td><td>安排更換（原廠或合資格車房）</td><td>視乎車型同零件，先問原廠報價</td></tr>
+          <tr><td>一個月內兩次冇電</td><td>驗電池同休眠耗電</td><td>搭電 12V $2XX 起</td></tr>
+          <tr><td>解鎖、螢幕開始失靈</td><td>唔好等，快啲驗</td><td>同上</td></tr>
+          <tr><td>換完仍然成日冇電</td><td>驗 DC-DC 轉換同漏電</td><td>唔關電池事，唔好重複換</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="area-h">
+  <div class="wrap sec-enter">
+    <p class="kicker">地區</p>
+    <h2 class="h2" id="area-h">電動車泊邊度都去到？</h2>
+    <div class="prose">
+      <p>電動車多數泊商場、屋苑同公共充電位，夜晚冇電最麻煩。過江龍 24 小時上門搭電：香港島、九龍、新界全覆蓋；元朗、屯門、荃灣、土瓜灣等查詢最多嘅地區，平均 15 至 20 分鐘到場。</p>
+      <p>落單時講清楚停車場層數、車位號碼同車型，技師可以直接搵到；部分停車場要登記車牌，我哋會預時間。</p>
+    </div>
+    <div class="area-chips">
+      <span class="chip">元朗</span><span class="chip">屯門</span><span class="chip">荃灣</span><span class="chip">土瓜灣</span><span class="chip">觀塘</span><span class="chip">沙田</span><span class="chip">將軍澳</span><span class="chip">中西區</span>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-label="現場相片">
+  <div class="wrap sec-enter">
+    <figure class="p-figure">
+      <img src="../../assets/hero-ending.jpg" alt="夜晚車輛車頭燈亮起，電子系統恢復供電" loading="lazy" width="1920" height="1080">
+      <figcaption>撻著之後，先確認螢幕同車門系統正常，再安排驗電池。</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section faq" id="faq" aria-labelledby="faq-h">
+  <div class="wrap sec-enter">
+    <p class="kicker">常見問題</p>
+    <h2 class="h2" id="faq-h">電動車 12V 電池，車主最常問咩？</h2>
+    <div class="faq-list">
+      <details><summary>電動車係唔係都有 12V 電池？</summary><p>有。除咗高壓大電池，仲有一粒 12V（部分新款 15 至 16V 鋰）輔助電池，供電俾車電腦、螢幕、車門同燈光。</p></details>
+      <details><summary>Tesla 12V 電池幾耐要換？</summary><p>一般 3 至 4 年，視乎用車習慣同氣候；出現更換警告或頻繁解鎖失敗就要檢查。實際年期以車主手冊同原廠建議為準。</p></details>
+      <details><summary>冇電有咩症狀？</summary><p>解鎖遲鈍或開唔到、螢幕唔著或重啟、燈變暗、APP 連線失敗、車輛報 12V 警告。多數係輔助電池，唔係高壓大電池。</p></details>
+      <details><summary>可以搭電嗎？</summary><p>可以，但要按車廠指定接點（部分車型要開前備箱），唔好隨便夾車身金屬；電壓系統唔肯定就交技師。</p></details>
+      <details><summary>搭電會唔會影響系統？</summary><p>指定接點、正確極性、短時間接電，一般唔會影響。亂夾、電壓唔對、長夾就有風險。</p></details>
+      <details><summary>可以自己換 12V 電池嗎？</summary><p>唔建議。位置、斷電程序同系統重設要按車廠流程，高壓系統附近亦唔應自己動手。</p></details>
+      <details><summary>12V 同高壓電池有咩分別？</summary><p>12V 供電俾電子系統；高壓大電池驅動馬達，電壓數百伏，故障唔可以自己處理，亦唔關搭電事。</p></details>
+      <details><summary>12V 電池幾錢？</summary><p>視乎車型同原廠零件，冇統一數。先問原廠報價再比較；搭電服務固定 12V $2XX 起。</p></details>
+      <details><summary>成日冇電係咩原因？</summary><p>三個可能：電池老化、休眠時異常耗電（軟件或加裝設備）、DC-DC 充電轉換問題。反覆冇電就要驗，唔好長期靠搭電。</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="rel-h">
+  <div class="wrap sec-enter">
+    <p class="kicker">相關</p>
+    <h2 class="h2" id="rel-h">12V 電池睇完，跟住睇邊頁？</h2>
+    <div class="rel-grid">
+      <a href="../../battery/lifespan/"><h3>電池壽命同電壓</h3><p>12V 系統電壓表，判斷電池係唔係老化。</p></a>
+      <a href="../../guides/jump-lead-steps/"><h3>救車線接法 6 步</h3><p>搭電次序同三個危險錯誤（傳統 12V 車適用）。</p></a>
+      <a href="../../services/battery-jump/"><h3>搭電服務</h3><p>搭電幾錢、幾快到，技師帶設備到場。</p></a>
+      <a href="../../battery/"><h3>汽車電池總覽</h3><p>鉛酸、AGM、EFB、LFP 四種電池分別。</p></a>
+    </div>
+  </div>
+</section>
+
+<section class="section p-end" aria-labelledby="cta-h">
+  <div class="wrap sec-enter">
+    <h2 class="h2" id="cta-h">螢幕唔著、車門開唔到，點算？</h2>
+    <p class="lede">打 5368 3668，講車型同位置，15 至 20 分鐘到場處理。</p>
+    <a class="btn big" href="tel:+85253683668">Call 5368 3668</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <p class="foot-name">過江龍的士搭電救車</p>
+    <p class="foot-line">24 小時救車熱線：<a href="tel:+85253683668">+852 5368 3668</a></p>
+    <p class="foot-line">服務範圍：香港全港各區</p>
+    <p class="foot-note">© 2026 過江龍的士搭電救車．本頁為草稿（未發佈）</p>
+  </div>
+</footer>
+
+<script src="../../assets/pages.js?v=4"></script>
+</body>
+</html>

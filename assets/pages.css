@@ -1,0 +1,141 @@
+/* 過江龍 — 內頁（draft）樣式
+   只喺 /towing/ /battery/ /services/ /guides/ 等新頁用；
+   index.html 唔引入本檔，所以首頁外觀零改動。
+   依賴 assets/style.css 已載入（tokens、nav、btn、chip、faq、footer 全部沿用）。 */
+
+/* nav 係 fixed，內頁冇 500vh hero，所以要自己留位 */
+.p-hero{padding-top:calc(clamp(5rem,9vw,7rem))}
+
+/* ⚠️ style.css 嘅 --font-mono 只有 Space Mono（拉丁字子集，冇 CJK）。
+   內頁有中文用等寬字（麵包屑、kicker、ghost 按鈕、表頭），
+   所以呢度加 CJK fallback，否則中文會變豆腐／系統亂配字。 */
+:root{--font-mono:'Space Mono','Noto Sans TC',ui-monospace,monospace}
+
+/* 標題唔好出現單字孤行（H1「正極先行」被拆開嘅情況） */
+.p-h1{text-wrap:balance}
+.nb{white-space:nowrap}
+.ans p{text-wrap:pretty}
+
+
+/* 麵包屑 */
+.crumbs{font-family:var(--font-mono);font-size:.78rem;letter-spacing:.04em;color:var(--text-secondary);display:flex;flex-wrap:wrap;gap:.45rem;align-items:center;margin-bottom:1.1rem}
+.crumbs a{color:var(--text-secondary);text-decoration:none}
+.crumbs a:hover{color:var(--accent)}
+.crumbs .sep{opacity:.5}
+.crumbs [aria-current]{color:var(--text-primary)}
+
+/* 內頁 hero */
+.p-hero{position:relative;z-index:1;padding:clamp(5.5rem,9vw,7.5rem) 0 clamp(2.2rem,5vw,3.4rem);
+  background:
+    radial-gradient(900px 420px at 78% 0%, rgba(255,169,76,.10), transparent 62%),
+    radial-gradient(700px 380px at 8% 18%, rgba(165,230,255,.07), transparent 60%),
+    linear-gradient(180deg,#0E1424,#0C1120);
+  border-bottom:1px solid var(--line)}
+.p-h1{font-family:var(--font-display);font-weight:400;font-size:clamp(1.9rem,5vw,3.2rem);line-height:1.16;max-width:26ch;margin-bottom:.9rem;text-shadow:0 1px 2px rgba(5,5,10,.8)}
+.p-sub{color:var(--text-secondary);font-size:clamp(.95rem,2vw,1.12rem);max-width:46rem;margin-bottom:1.4rem}
+
+/* 40–60 字答案段：AEO／GEO 抽取位 */
+.ans{max-width:46rem;background:rgba(20,27,48,.92);border:1px solid var(--accent-muted);border-left:4px solid var(--accent);
+  border-radius:14px;padding:1.1rem 1.2rem;margin:1.1rem 0 1.5rem;box-shadow:0 10px 34px rgba(0,0,0,.32)}
+.ans .ans-label{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:.45rem}
+.ans p{color:var(--text-primary);font-size:clamp(1rem,2.1vw,1.1rem);line-height:1.55}
+.ans strong{color:var(--accent)}
+
+.cta-row{display:flex;flex-wrap:wrap;gap:.7rem;align-items:center}
+.p-hero .fine{text-align:left;margin-top:1rem}
+
+/* 目錄（長頁用） */
+.toc{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:1rem 1.2rem;max-width:52rem}
+.toc h2{font-family:var(--font-mono);font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:.7rem}
+.toc ol{list-style:none;display:grid;gap:.35rem;counter-reset:t}
+.toc li{counter-increment:t;font-size:.95rem}
+.toc li::before{content:counter(t) ". ";color:var(--accent);font-family:var(--font-mono)}
+.toc a{color:var(--text-primary);text-decoration:none;border-bottom:1px solid rgba(245,241,230,.18)}
+.toc a:hover{border-color:var(--accent)}
+
+/* 段落內元素 */
+.prose{max-width:52rem}
+.prose h3{font-family:var(--font-display);font-weight:400;font-size:clamp(1.15rem,2.6vw,1.5rem);margin:1.6rem 0 .5rem}
+.prose p{color:var(--text-secondary);font-size:1rem;line-height:1.72;margin-bottom:.9rem}
+.prose p strong{color:var(--text-primary)}
+.prose ul,.prose ol{margin:0 0 1rem 1.2rem;color:var(--text-secondary);display:grid;gap:.4rem;font-size:1rem;line-height:1.6}
+.prose li strong{color:var(--text-primary)}
+
+/* 卡片組 */
+.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+.card-grid.two{grid-template-columns:repeat(2,1fr)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:1.3rem 1.25rem}
+.card h3{font-family:var(--font-display);font-weight:400;font-size:1.12rem;margin-bottom:.4rem}
+.card p{color:var(--text-secondary);font-size:.94rem;line-height:1.6}
+.card .tag{display:inline-block;font-family:var(--font-mono);font-size:.7rem;letter-spacing:.1em;color:var(--accent);margin-bottom:.5rem}
+
+/* 費用／比較表 */
+.tbl-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--panel)}
+table.fee{width:100%;border-collapse:collapse;min-width:520px}
+table.fee th,table.fee td{padding:.85rem 1rem;text-align:left;font-size:.95rem;border-bottom:1px solid var(--line);vertical-align:top}
+table.fee th{font-family:var(--font-mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);background:rgba(255,169,76,.05)}
+table.fee td{color:var(--text-secondary)}
+table.fee td strong{color:var(--text-primary)}
+table.fee tr:last-child td{border-bottom:0}
+table.fee td.nowrap{white-space:nowrap}
+
+/* 地區 chips（唔開城市頁，只做 variant section） */
+.area-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem}
+.area-chips .chip{border-color:var(--accent-muted)}
+
+/* 提示框 */
+.note-box{border:1px solid var(--line);border-left:3px solid var(--current);background:rgba(165,230,255,.04);border-radius:12px;padding:1rem 1.1rem;max-width:52rem;margin:1.4rem 0}
+.note-box p{color:var(--text-secondary);font-size:.94rem;line-height:1.62}
+.note-box p strong{color:var(--text-primary)}
+
+.warn-box{border-left-color:var(--clamp-red);background:rgba(229,68,63,.06)}
+
+/* 乾淨清單 */
+.check-list{list-style:none;display:grid;gap:.5rem;max-width:52rem}
+.check-list li{color:var(--text-secondary);font-size:.96rem;padding-left:1.6rem;position:relative}
+.check-list li::before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:700}
+
+/* 相關頁 */
+.rel-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem;max-width:52rem}
+.rel-grid a{display:block;text-decoration:none;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:1rem 1.1rem;transition:border-color .25s,transform .25s}
+.rel-grid a:hover{border-color:var(--accent);transform:translateY(-2px)}
+.rel-grid h3{font-family:var(--font-display);font-weight:400;font-size:1.05rem;color:var(--text-primary);margin-bottom:.25rem}
+.rel-grid p{color:var(--text-secondary);font-size:.88rem;line-height:1.55}
+
+/* 內頁圖片 */
+.p-figure{margin:1.6rem 0;border-radius:16px;overflow:hidden;border:1px solid var(--line);max-width:52rem}
+.p-figure img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+.p-figure figcaption{color:var(--text-secondary);font-size:.82rem;padding:.7rem 1rem;background:rgba(20,27,48,.9)}
+
+/* 內頁 footer 上方 CTA */
+.p-end{text-align:center}
+.p-end .h2{margin-left:auto;margin-right:auto}
+
+@media (max-width:900px){
+  .card-grid,.card-grid.two,.rel-grid{grid-template-columns:1fr}
+}
+/* 手機：主要 CTA 排成 full-width stacking，手指好按、唔會半行空 */
+@media (max-width:560px){
+  .cta-row{flex-direction:column;align-items:stretch}
+  .cta-row .btn{width:100%;text-align:center;justify-content:center}
+}
+/* 手機：表格改成 stacked card（唔靠橫向滑動），每格用 data-label 顯示欄名 */
+@media (max-width:720px){
+  .tbl-wrap{border:0;background:transparent;overflow:visible;border-radius:0}
+  table.fee{min-width:0;width:100%;border-collapse:separate;border-spacing:0;display:block}
+  table.fee caption{display:block;text-align:left;padding:0 .2rem .7rem;color:var(--text-secondary);font-size:.95rem}
+  table.fee thead{display:none}
+  table.fee tr{display:block;background:var(--panel);border:1px solid var(--line);border-radius:14px;margin-bottom:.7rem;padding:.2rem 0;overflow:hidden}
+  table.fee td{display:grid;grid-template-columns:7rem 1fr;gap:.7rem;align-items:baseline;border:0;padding:.55rem .9rem;font-size:1.08rem}
+  table.fee td::before{content:attr(data-label);color:var(--accent);font-family:var(--font-mono);font-size:.82rem;letter-spacing:.04em;line-height:1.5}
+  table.fee td.nowrap{white-space:normal}
+  table.fee tr td:not(:last-child){border-bottom:1px solid rgba(165,230,255,.08)}
+}
+@media (max-width:720px){
+  .p-h1{font-size:clamp(1.7rem,7vw,2.4rem)}
+  .p-sub,.ans p,.prose p,.prose li,.card p,.note-box p,.check-list li,.rel-grid p,table.fee th,table.fee td{font-size:1.12rem}
+  .card h3,.rel-grid h3,.prose h3{font-size:1.35rem}
+  .ans{padding:1rem 1.05rem}
+  .toc h2{font-size:.9rem}
+  .toc li{font-size:1.1rem}
+}
