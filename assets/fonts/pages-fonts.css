@@ -1,6 +1,6 @@
 /* 過江龍 — 內頁字型（draft 頁專用）
    首頁用嘅 fonts.css 係 443 字子集，只夠首頁用；新頁有 ~1000 個字，
-   所以獨立做一份 expanded 子集（1,197 字：12 頁全部文字 + ASCII + CJK 標點 + 全形）。
+   所以獨立做一份 expanded 子集（1,236 字：13 頁全部文字 + ASCII + CJK 標點 + 全形）。
    只喺新頁載入，index.html 完全唔受影響。
 
    重新產生（改咗新頁文案之後要再做一次）：
@@ -8,9 +8,9 @@
        --output-file=pages-zcool-400.woff2 --layout-features='kern,liga' --desubroutinize
    chars-pages.txt ＝ 5 頁 HTML 去標籤後嘅全部字元 + ASCII + U+3000–303F + U+FF01–FF5E
 */
-@font-face{font-family:'ZCOOL QingKe HuangYou';src:url('pages-zcool-400.woff2?v=4') format('woff2');font-weight:400;font-style:normal;font-display:swap}
-@font-face{font-family:'Noto Sans TC';src:url('pages-noto-400.woff2?v=4') format('woff2');font-weight:400;font-style:normal;font-display:swap}
-@font-face{font-family:'Noto Sans TC';src:url('pages-noto-400.woff2?v=4') format('woff2');font-weight:500;font-style:normal;font-display:swap}
-@font-face{font-family:'Noto Sans TC';src:url('pages-noto-700.woff2?v=4') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'ZCOOL QingKe HuangYou';src:url('pages-zcool-400.woff2?v=5') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Noto Sans TC';src:url('pages-noto-400.woff2?v=5') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Noto Sans TC';src:url('pages-noto-400.woff2?v=5') format('woff2');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'Noto Sans TC';src:url('pages-noto-700.woff2?v=5') format('woff2');font-weight:700;font-style:normal;font-display:swap}
 @font-face{font-family:'Space Mono';src:url('spacemono-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
 @font-face{font-family:'Space Mono';src:url('spacemono-700.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}

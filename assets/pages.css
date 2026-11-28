@@ -13,6 +13,7 @@
 
 /* 標題唔好出現單字孤行（H1「正極先行」被拆開嘅情況） */
 .p-h1{text-wrap:balance}
+.h2{text-wrap:balance}
 .nb{white-space:nowrap}
 .ans p{text-wrap:pretty}
 
@@ -126,7 +127,8 @@ table.fee td.nowrap{white-space:nowrap}
   table.fee caption{display:block;text-align:left;padding:0 .2rem .7rem;color:var(--text-secondary);font-size:.95rem}
   table.fee thead{display:none}
   table.fee tr{display:block;background:var(--panel);border:1px solid var(--line);border-radius:14px;margin-bottom:.7rem;padding:.2rem 0;overflow:hidden}
-  table.fee td{display:grid;grid-template-columns:7rem 1fr;gap:.7rem;align-items:baseline;border:0;padding:.55rem .9rem;font-size:1.08rem}
+  table.fee td{display:grid;grid-template-columns:6.5rem minmax(0,1fr);gap:.6rem;align-items:baseline;border:0;padding:.55rem .9rem;font-size:1.08rem;min-width:0}
+  table.fee td,table.fee caption{overflow-wrap:anywhere}
   table.fee td::before{content:attr(data-label);color:var(--accent);font-family:var(--font-mono);font-size:.82rem;letter-spacing:.04em;line-height:1.5}
   table.fee td.nowrap{white-space:normal}
   table.fee tr td:not(:last-child){border-bottom:1px solid rgba(165,230,255,.08)}
