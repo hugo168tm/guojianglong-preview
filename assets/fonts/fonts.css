@@ -2,9 +2,9 @@
    (443 chars incl. ASCII + CJK punctuation). ~450KB total instead of loading
    full Google Fonts subsets. If page copy changes, re-subset with:
    pyftsubset <src> --text-file=chars.txt --flavor=woff2 --output-file=... */
-@font-face{font-family:'ZCOOL QingKe HuangYou';src:url('zcool-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
-@font-face{font-family:'Noto Sans TC';src:url('noto-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
-@font-face{font-family:'Noto Sans TC';src:url('noto-500.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
-@font-face{font-family:'Noto Sans TC';src:url('noto-700.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'ZCOOL QingKe HuangYou';src:url('zcool-400.woff2?v=2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Noto Sans TC';src:url('noto-400.woff2?v=2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Noto Sans TC';src:url('noto-500.woff2?v=2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'Noto Sans TC';src:url('noto-700.woff2?v=2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
 @font-face{font-family:'Space Mono';src:url('spacemono-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
 @font-face{font-family:'Space Mono';src:url('spacemono-700.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}

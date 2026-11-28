@@ -8,9 +8,9 @@
        --output-file=pages-zcool-400.woff2 --layout-features='kern,liga' --desubroutinize
    chars-pages.txt ＝ 5 頁 HTML 去標籤後嘅全部字元 + ASCII + U+3000–303F + U+FF01–FF5E
 */
-@font-face{font-family:'ZCOOL QingKe HuangYou';src:url('pages-zcool-400.woff2?v=5') format('woff2');font-weight:400;font-style:normal;font-display:swap}
-@font-face{font-family:'Noto Sans TC';src:url('pages-noto-400.woff2?v=5') format('woff2');font-weight:400;font-style:normal;font-display:swap}
-@font-face{font-family:'Noto Sans TC';src:url('pages-noto-400.woff2?v=5') format('woff2');font-weight:500;font-style:normal;font-display:swap}
-@font-face{font-family:'Noto Sans TC';src:url('pages-noto-700.woff2?v=5') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'ZCOOL QingKe HuangYou';src:url('pages-zcool-400.woff2?v=6') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Noto Sans TC';src:url('pages-noto-400.woff2?v=6') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Noto Sans TC';src:url('pages-noto-400.woff2?v=6') format('woff2');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'Noto Sans TC';src:url('pages-noto-700.woff2?v=6') format('woff2');font-weight:700;font-style:normal;font-display:swap}
 @font-face{font-family:'Space Mono';src:url('spacemono-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
 @font-face{font-family:'Space Mono';src:url('spacemono-700.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
